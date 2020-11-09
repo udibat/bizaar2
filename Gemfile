@@ -153,7 +153,7 @@ group :test do
 
   gem 'fake_stripe', git: 'https://github.com/ithouse/fake_stripe.git', ref: '56fe73dc420d161ecf9842739af7d857031ca1b2'
   gem 'poltergeist'
-  gem 'puma'
+#  gem 'puma'
   gem 'webdrivers'
 end
 
@@ -185,3 +185,13 @@ gem 'bootsnap', require: false
 gem "select2-rails"
 gem "cocoon"
 gem "fast-polylines"
+
+gem 'daemons'
+gem 'puma', '~>3.12'
+
+gem 'capistrano', '~> 3.6'
+gem 'capistrano-rvm' 
+gem 'capistrano-bundler', '~> 1.3'
+gem 'capistrano-rails', '~> 1.3'
+gem 'capistrano-npm'
+gem 'whenever'
