@@ -22,6 +22,7 @@ window.ST = window.ST || {};
     // Display correct attribute menus and their titles
     var title = "";
     var shouldLoadForm = false;
+    var isSubcategory = false;
     if (should_show_menu_for("category", selected_attributes, attribute_array)) {
       title = listing_form_menu_titles["category"];
       display_option_group("category", selected_attributes, attribute_array);
@@ -31,10 +32,17 @@ window.ST = window.ST || {};
     } else if (should_show_menu_for("listing_shape", selected_attributes, attribute_array)) {
       title = listing_form_menu_titles["listing_shape"];
       display_option_group("listing_shape", selected_attributes, attribute_array);
+      isSubcategory = true;
     } else {
       shouldLoadForm = true;
     }
     $('h2.listing-form-title').html(title);
+
+    if (isSubcategory) {
+      $("#more_listing_types").css("display", "flex");
+    } else {
+      $("#more_listing_types").hide();
+    }
 
     return shouldLoadForm;
   }

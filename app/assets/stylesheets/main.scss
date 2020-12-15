@@ -2233,3 +2233,20 @@ figure.fluidratio {
     }
   }
 }
+
+.more-listing-types {
+  display: none;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 50px;
+
+  &-link {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .text-icon {
+    margin-right: 5px;
+  }
+}
