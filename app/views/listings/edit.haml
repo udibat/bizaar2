@@ -57,6 +57,10 @@
           %a.select.option.hidden{:data => {:id => value[:id]}}
             .link-text= t(value[:name_tr_key])
 
+  .more-listing-types#more_listing_types
+    %span.icon-question-sign.text-icon
+    = link_to "Click here to learn more about listing types", "https://www.blog.bizaar.ca/listing-types/", class: "more-listing-types-link", target: "_blank"
+
   .js-form-fields.hidden
 
     - if form_content
