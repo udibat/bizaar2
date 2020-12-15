@@ -7,8 +7,24 @@
 .left-navi-dropdown {
   &:hover { background: $highlight; }
   color: $body;
-  padding: em(10) lines(0.5);
+  padding: em(10) 30px em(10) lines(0.5);
   border-bottom: 1px dotted $border;
+  position: relative;
+
+  &.toggled {
+    &::after {
+      content: '\F077';
+    }  
+  }
+
+  &::after {
+    content: '\F078';
+    font-family: FontAwesome;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    line-height: 1;
+  }
 }
 
 .wrapper {
